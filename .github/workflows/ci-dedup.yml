@@ -23,7 +23,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Copy test data
-      run: aws s3 cp s3://justiceaitestdata ./tests/test_data --region us-east --recursive --no-sign-request
+      run: aws s3 cp s3://justiceaitestdata ./tests/test_data --region us-east-1 --recursive --no-sign-request
     - name: Copy dockerfile into root
     # Copy  Dockerfile into root due to limitations set by the Github actions worflow
       run: cp docker/Dockerfile.dedup-cpu Dockerfile
