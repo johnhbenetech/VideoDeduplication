@@ -22,9 +22,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout
       uses: actions/checkout@v2
-    #  This will install and fetch files that have been comitted through git lfs 
-      with:
-        lfs: true
     - name: Copy test data
       run: aws s3 cp s3://justiceaitestdata ./tests/test_data --recursive
         
