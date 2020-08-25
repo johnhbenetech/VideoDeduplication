@@ -28,7 +28,7 @@ jobs:
       
     - name: Copy dockerfile into root
       run: aws s3 cp s3://justiceaitestdata ./tests/test_data --recursive
-    # Copy Dockerfile into root due to limitations set by the Github actions worflow
+    # Copy  Dockerfile into root due to limitations set by the Github actions worflow
       run: cp docker/Dockerfile.dedup-cpu Dockerfile
       
     - name: Build Docker CPU
